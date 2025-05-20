@@ -8,7 +8,7 @@ Esta entrega tem como foco simular o armazenamento dos dados capturados por sens
 
 ## Contexto e Simulação
 
-Os dados utilizados representam leituras que, em um cenário real, seriam coletadas via monitor serial do ESP32. No entanto, como o circuito está hospedado no [Wokwi](https://wokwi.com), sem um microcontrolador físico conectado, optou-se por **simular a coleta desses dados diretamente no script Python**, conforme permitido na proposta da entrega.
+Os dados utilizados representam leituras que, em um cenário real, seriam coletadas via monitor serial do ESP32. No entanto, como o circuito está hospedado no [Wokwi](https://wokwi.com/projects/431422752922568705), sem um microcontrolador físico conectado, optou-se por **simular a coleta desses dados diretamente no script Python**, conforme permitido na proposta da entrega.
 
 ---
 
