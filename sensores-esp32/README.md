@@ -56,11 +56,11 @@ Wokwi Simulator: Link para o projeto https://wokwi.com/projects/4314227529225687
 
 ## Exemplos do Circuito em Funcionamento
 
-<img src="assets/funcionamento1.png" alt="Sensores simulados através do Wokwi Simulator" border="0" width=80% height=80%>
 Neste primeiro exemplo, a umidade do solo está abaixo de 40%, ativando a irrigação (LED vermelho), e o solo conta com a presença de potássio (botão).
+<img src="assets/funcionamento1.png" alt="Sensores simulados através do Wokwi Simulator" border="0" width=95% height=95%>
 
-<img src="assets/funcionamento2.png" alt="Sensores simulados através do Wokwi Simulator" border="0" width=80% height=80%>
 No segundo exemplo, a umidade do solo está acima de 40%, desligando a irrigação (LED vermelho), e o solo conta com a presença de fósforo (botão).
+<img src="assets/funcionamento2.png" alt="Sensores simulados através do Wokwi Simulator" border="0" width=95% height=95%>
 
 ## Observações Finais
 O código foi comentado de forma didática para facilitar a leitura e a avaliação.
