@@ -52,7 +52,15 @@ Exemplo de saída no monitor serial:
 Wokwi Simulator: Link para o projeto https://wokwi.com/projects/431422752922568705
 
 ## Imagem do Circuito
-Insira aqui um print ou foto do circuito montado no Wokwi.
+<img src="assets/sensores.png" alt="Sensores simulados através do Wokwi Simulator" border="0" width=80% height=80%>
+
+## Exemplos do Circuito em Funcionamento
+
+<img src="assets/funcionamento1.png" alt="Sensores simulados através do Wokwi Simulator" border="0" width=80% height=80%>
+Neste primeiro exemplo, a umidade do solo está abaixo de 40%, ativando a irrigação (LED vermelho), e o solo conta com a presença de potássio (botão).
+
+<img src="assets/funcionamento2.png" alt="Sensores simulados através do Wokwi Simulator" border="0" width=80% height=80%>
+No segundo exemplo, a umidade do solo está acima de 40%, desligando a irrigação (LED vermelho), e o solo conta com a presença de fósforo (botão).
 
 ## Observações Finais
 O código foi comentado de forma didática para facilitar a leitura e a avaliação.
