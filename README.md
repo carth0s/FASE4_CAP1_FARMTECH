@@ -3,7 +3,7 @@
 ## Estrutura do Projeto
 
 ```
-**FASE3_CAP1**/
+FASE3_CAP1/
 ├── banco-python/
 │ ├── README.md → Explicação do código Python
 │ ├── script.py → CRUD em Python com SQLite
