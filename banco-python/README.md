@@ -58,7 +58,9 @@ Leitura 3: Potássio - 27.5 ppm
 
 ---
 
-## Exemplo de Uso - Saída
+## Exemplo de Uso 
+
+Além das funções CRUD, o código inclui um exemplo prático que demonstra como realizar operações de inserção, leitura, atualização e deleção dos dados.
 
 ```plaintext
 === INSERINDO SENSOR BASE ===
