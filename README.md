@@ -29,3 +29,6 @@ FASE3_CAP1/
 │ ├── main.cpp → Código do ESP32 (simulação ou implementação real)
 ├── README.md → Este arquivo, explicando o projeto geral
 ```
+
+> Para detalhes sobre cada módulo do projeto, consulte os arquivos `README.md` nas respectivas pastas.
+
