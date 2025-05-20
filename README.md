@@ -1,7 +1,5 @@
 # Atividade FASE3_CAP1
 
----
-
 ## Integrantes: 
 - Carlos Daniel Silveira Do Nascimento - RM88439
 - Mauricio Jose Ferlin Tonnera - RM565469
