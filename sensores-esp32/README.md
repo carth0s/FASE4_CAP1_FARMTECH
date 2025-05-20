@@ -49,11 +49,11 @@ Exemplo de saída no monitor serial:
   Potássio (botão): 1
 ```
 ## Plataforma Utilizada
-- Wokwi Simulator: Link para o projeto https://wokwi.com/projects/431422752922568705
+Wokwi Simulator: Link para o projeto https://wokwi.com/projects/431422752922568705
 
 ## Imagem do Circuito
 Insira aqui um print ou foto do circuito montado no Wokwi.
 
 ## Observações Finais
-- O código foi comentado de forma didática para facilitar a leitura e a avaliação.
+O código foi comentado de forma didática para facilitar a leitura e a avaliação.
 
