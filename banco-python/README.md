@@ -1,4 +1,4 @@
-# Entrega 2: Armazenamento de Dados em Banco SQL com Python
+# Armazenamento de Dados em Banco SQL com Python
 
 ## Objetivo
 
