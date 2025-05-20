@@ -1,5 +1,14 @@
 # Atividade FASE3_CAP1
 
+---
+
+## Integrantes: 
+- Carlos Daniel Silveira Do Nascimento - RM88439
+- Mauricio Jose Ferlin Tonnera - RM565469
+- Rodrigo Portugal Santos - RM564773
+
+---
+
 ## Projeto: Sistema de Monitoramento de Irrigação com Sensores
 
 Este projeto tem como objetivo criar um sistema de monitoramento de sensores em plantações, permitindo o registro e acompanhamento de leituras como umidade, fósforo e potássio do solo. A arquitetura é composta por:
