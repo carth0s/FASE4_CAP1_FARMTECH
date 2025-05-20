@@ -2,7 +2,7 @@
 
 ## Estrutura do Projeto
 
-
+```
 FASE3_CAP1/
 ├── banco-python/
 │ ├── README.md → Explicação do código Python
@@ -15,4 +15,4 @@ FASE3_CAP1/
 │ ├── README.md → Explicação do circuito e ESP32
 │ ├── main.cpp → Código do ESP32 (simulação ou implementação real)
 ├── README.md → Este arquivo, explicando o projeto geral
-
+```
