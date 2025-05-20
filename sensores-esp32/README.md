@@ -5,7 +5,6 @@ Este projeto simula um sistema inteligente de irrigação utilizando sensores f�
 Foi desenvolvido com base em uma placa ESP32, utilizando o simulador Wokwi.
 
 ## Componentes Utilizados
-
 - ESP32 - Microcontrolador principal
 - DHT22	- Sensor digital de temperatura e umidade (usado aqui apenas para umidade)
 - LDR - Sensor analógico utilizado como simulação de leitura de pH
@@ -22,7 +21,6 @@ Foi desenvolvido com base em uma placa ESP32, utilizando o simulador Wokwi.
 - Monitor serial exibe todas as leituras e alertas.
 
 ## Lógica de Funcionamento
-
 ```cpp
   if (umidade < 40.0) {
     // Liga bomba se solo estiver seco
@@ -50,6 +48,9 @@ Exemplo de saída no monitor serial:
 ```
 ## Plataforma Utilizada
 Wokwi Simulator: Link para o projeto https://wokwi.com/projects/431422752922568705
+
+## Código Fonte
+O código fonte (C++) foi disponibilizado no arquivo main.cpp
 
 ## Imagem do Circuito
 <img src="assets/sensores.png" alt="Sensores simulados através do Wokwi Simulator" border="0" width=80% height=80%>
