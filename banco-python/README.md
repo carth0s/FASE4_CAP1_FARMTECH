@@ -53,4 +53,47 @@ O arquivo `main.py` contém as seguintes funcionalidades:
 ```plaintext
 Leitura 1: Umidade - 45.2%
 Leitura 2: Fósforo - 18.7 ppm
-Leitura 3: Potássio - 25.0 ppm
+Leitura 3: Potássio - 27.5 ppm
+```
+
+---
+
+## Exemplo de Uso - Saída
+
+```plaintext
+=== INSERINDO SENSOR BASE ===
+Sensor inserido com sucesso!
+
+=== INSERINDO LEITURAS ===
+Leitura inserida com sucesso!
+Leitura inserida com sucesso!
+Leitura inserida com sucesso!
+
+=== LISTANDO LEITURAS INSERIDAS ===
+ID    Data/Hora              Valor      Tipo         Sensor ID
+------------------------------------------------------------
+1     2025-05-20 13:22:32.388501 45.2       umidade      1
+2     2025-05-20 13:22:32.392318 18.7       fosforo      1
+3     2025-05-20 13:22:32.396405 27.5       potassio     1
+
+=== ATUALIZANDO LEITURA ID 1 PARA VALOR 50.0 ===
+Leitura atualizada com sucesso!
+
+=== LISTANDO LEITURAS APÓS ATUALIZAÇÃO ===
+ID    Data/Hora              Valor      Tipo         Sensor ID
+------------------------------------------------------------
+1     2025-05-20 13:22:32.388501 50.0       umidade      1
+2     2025-05-20 13:22:32.392318 18.7       fosforo      1
+3     2025-05-20 13:22:32.396405 27.5       potassio     1
+
+=== DELETANDO LEITURA ID 2 ===
+Leitura deletada com sucesso!
+
+=== LISTANDO LEITURAS FINAIS ===
+ID    Data/Hora              Valor      Tipo         Sensor ID
+------------------------------------------------------------
+1     2025-05-20 13:22:32.388501 50.0       umidade      1
+3     2025-05-20 13:22:32.396405 27.5       potassio     1
+
+```
+
