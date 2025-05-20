@@ -4,13 +4,11 @@
 
 Esta entrega tem como foco simular o armazenamento dos dados capturados por sensores (como umidade, fósforo e potássio) em um banco de dados relacional, utilizando Python com SQLite. As operações CRUD foram implementadas, e o modelo relacional segue a estrutura definida no MER da Fase 2.
 
----
 
 ## Contexto e Simulação
 
 Os dados utilizados representam leituras que, em um cenário real, seriam coletadas via monitor serial do ESP32. No entanto, como o circuito está hospedado no [Wokwi](https://wokwi.com/projects/431422752922568705), sem um microcontrolador físico conectado, optou-se por **simular a coleta desses dados diretamente no script Python**, conforme permitido na proposta da entrega.
 
----
 
 ## Estrutura das Tabelas e Relação com o MER
 
@@ -34,7 +32,6 @@ As tabelas abaixo foram criadas no script `main.py` com base nas entidades defin
 | TIPO_MEDICAO      | TEXT         | Tipo da medição (umidade, fósforo, potássio)  |
 | ID_SENSOR         | INTEGER FK   | Sensor associado                              |
 
----
 
 ## Funcionalidades do Script
 
@@ -46,7 +43,6 @@ O arquivo `main.py` contém as seguintes funcionalidades:
 - **Remoção de registros** de leitura específicos.
 - **Criação e reset do banco** SQLite para testes.
 
----
 
 ## Exemplos de Dados Inseridos
 
@@ -55,8 +51,6 @@ Leitura 1: Umidade - 45.2%
 Leitura 2: Fósforo - 18.7 ppm
 Leitura 3: Potássio - 27.5 ppm
 ```
-
----
 
 ## Exemplo de Uso 
 
