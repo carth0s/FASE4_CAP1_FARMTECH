@@ -7,10 +7,10 @@ Foi desenvolvido com base em uma placa ESP32, utilizando o simulador Wokwi.
 ## Componentes Utilizados
 
 - ESP32 - Microcontrolador principal
-- DHT22	Sensor digital de temperatura e umidade (usado aqui apenas para umidade)
-- LDR (simula pH)	Sensor analógico utilizado como simulação de leitura de pH
-- Botões	Simulam presença de fósforo e potássio no solo
-- LED	Simula o relé de acionamento de uma bomba de irrigação
+- DHT22	- Sensor digital de temperatura e umidade (usado aqui apenas para umidade)
+- LDR (simula pH) - Sensor analógico utilizado como simulação de leitura de pH
+- Botões - Simulam presença de fósforo e potássio no solo
+- LED	- Simula o relé de acionamento de uma bomba de irrigação
 
 ## Funcionalidades
 - Leitura da umidade com o sensor DHT22.
