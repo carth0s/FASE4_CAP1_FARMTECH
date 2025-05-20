@@ -5,8 +5,6 @@
 - Mauricio Jose Ferlin Tonnera - RM565469
 - Rodrigo Portugal Santos - RM564773
 
----
-
 ## Projeto: Sistema de Monitoramento de Irrigação com Sensores
 
 Este projeto tem como objetivo criar um sistema de monitoramento de sensores em plantações, permitindo o registro e acompanhamento de leituras como umidade, fósforo e potássio do solo. A arquitetura é composta por:
@@ -14,8 +12,6 @@ Este projeto tem como objetivo criar um sistema de monitoramento de sensores em 
 - ESP32 com sensores físicos (simulados)
 
 - Script em Python com SQLite (armazenamento dos dados)
-
----
 
 ## Estrutura do Projeto
 
@@ -33,4 +29,3 @@ FASE3_CAP1/
 │ ├── main.cpp → Código do ESP32 (simulação ou implementação real)
 ├── README.md → Este arquivo, explicando o projeto geral
 ```
----
