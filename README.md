@@ -13,6 +13,10 @@ Este projeto tem como objetivo criar um sistema de monitoramento de sensores em 
 
 - Script em Python com SQLite (armazenamento dos dados)
 
+## Vídeo de Demonstração
+
+[Ver vídeo com o código em funcionamento](https://www.seulink.com](https://youtu.be/yiYGIzw4ZB8)
+
 ## Estrutura do Projeto
 
 ```
