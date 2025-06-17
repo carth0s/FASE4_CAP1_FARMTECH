@@ -28,6 +28,8 @@ Este projeto tem como objetivo criar um sistema de monitoramento de sensores em 
 
 - Script em Python com SQLite (armazenamento dos dados)
 
+> Este projeto é baseado na versão da Fase 3 da FarmTech Solutions, agora reestruturado conforme o template oficial.
+
 ## 🎥 Vídeo de Demonstração
 
 Vídeo com o código em funcionamento: https://youtu.be/yiYGIzw4ZB8
