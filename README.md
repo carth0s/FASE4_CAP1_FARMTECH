@@ -1,11 +1,26 @@
-# Atividade FASE3_CAP1
+# FIAP - Faculdade de Informática e Administração Paulista
 
-## Integrantes: 
+<p align="center">
+<a href= "https://www.fiap.com.br/"><img src="assets/logo-fiap.png" alt="FIAP - Faculdade de Informática e Admnistração Paulista" border="0" width=40% height=40%></a>
+</p>
+
+<br>
+
+# Atividade FASE4_CAP1 - FARMTECH
+
+## 👨‍🎓 Integrantes: 
 - Carlos Daniel Silveira Do Nascimento - RM88439
 - Mauricio Jose Ferlin Tonnera - RM565469
 - Rodrigo Portugal Santos - RM564773
 
-## Projeto: Sistema de Monitoramento de Irrigação com Sensores
+## 👩‍🏫 Professores:
+### Tutor
+- Leonardo Ruiz Orabona
+### Coordenador
+- André Godoi
+
+
+## 📜 Descrição
 
 Este projeto tem como objetivo criar um sistema de monitoramento de sensores em plantações, permitindo o registro e acompanhamento de leituras como umidade, fósforo e potássio do solo. A arquitetura é composta por:
 
@@ -13,26 +28,47 @@ Este projeto tem como objetivo criar um sistema de monitoramento de sensores em 
 
 - Script em Python com SQLite (armazenamento dos dados)
 
-## Vídeo de Demonstração
+## 🎥 Vídeo de Demonstração
 
 Vídeo com o código em funcionamento: https://youtu.be/yiYGIzw4ZB8
 
-## Estrutura do Projeto
 
-```
-FASE3_CAP1/
-├── banco-python/
-│ ├── README.md → Explicação do código Python
-│ ├── script.py → CRUD em Python com SQLite
-├── sensores-esp32/
-│ ├── assets/ → Imagens ilustrativas
-│ │ ├── sensores.png → Diagrama do circuito dos sensores
-│ │ ├── funcionamento1.png → Ilustração do funcionamento (exemplo 1)
-│ │ ├── funcionamento2.png → Ilustração do funcionamento (exemplo 2)
-│ ├── README.md → Explicação do circuito e ESP32
-│ ├── main.cpp → Código do ESP32 (simulação ou implementação real)
-├── README.md → Este arquivo, explicando o projeto geral
-```
+## 📁 Estrutura de pastas
 
-> Para detalhes sobre cada módulo do projeto, consulte os arquivos `README.md` nas respectivas pastas.
+Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
+- <b>.github</b>: Nesta pasta ficarão os arquivos de configuração específicos do GitHub que ajudam a gerenciar e automatizar processos no repositório.
+
+- <b>assets</b>: aqui estão os arquivos relacionados a elementos não-estruturados deste repositório, como imagens.
+
+- <b>config</b>: Posicione aqui arquivos de configuração que são usados para definir parâmetros e ajustes do projeto.
+
+- <b>document</b>: aqui estão todos os documentos do projeto que as atividades poderão pedir. Na subpasta "other", adicione documentos complementares e menos importantes.
+
+- <b>scripts</b>: Posicione aqui scripts auxiliares para tarefas específicas do seu projeto. Exemplo: deploy, migrações de banco de dados, backups.
+
+- <b>src</b>: Todo o código fonte criado para o desenvolvimento do projeto ao longo das 7 fases.
+
+- <b>README.md</b>: arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
+
+## 🔧 Como executar o código
+
+*Acrescentar as informações necessárias sobre pré-requisitos (IDEs, serviços, bibliotecas etc.) e instalação básica do projeto, descrevendo eventuais versões utilizadas. Colocar um passo a passo de como o leitor pode baixar o seu código e executá-lo a partir de sua máquina ou seu repositório. Considere a explicação organizada em fase.*
+
+
+## 🗃 Histórico de lançamentos
+
+* 0.5.0 - XX/XX/2024
+    * 
+* 0.4.0 - XX/XX/2024
+    * 
+* 0.3.0 - XX/XX/2024
+    * 
+* 0.2.0 - XX/XX/2024
+    * 
+* 0.1.0 - XX/XX/2024
+    *
+
+## 📋 Licença
+
+<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/agodoi/template">MODELO GIT FIAP</a> por <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://fiap.com.br">Fiap</a> está licenciado sobre <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
