@@ -57,7 +57,7 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 - <b>scripts</b>: _Esta pasta não foi utilizada no projeto, mas foi mantida para respeitar o template obrigatório_
 
 - <b>src</b>: Aqui estão os códigos fontes utilizados no projeto:
-   - main.ino = Código C++ responsável por rodar no ESP32 simulado no Wokwi.
+   - main.cpp = Código C++ responsável por rodar no ESP32 simulado no Wokwi.
    - script.py = Script Python com um banco de dados SQLite que simula o armazenamento local de dados de sensores.
    - app.py = Aplicação interativa feita com Streamlit, que carrega um modelo de Machine Learning treinado e permite prever se o solo precisa ou não de irrigação com base no valor de umidade fornecido pelo usuário.
    - dataset_umidade.csv = Base de dados com 100 leituras simuladas de umidade e a indicação binária (precisa_irrigar) usada para treinar o modelo de ML. 
