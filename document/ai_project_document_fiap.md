@@ -1,15 +1,13 @@
 
 <img src="../assets/logo-fiap.png" alt="FIAP - Faculdade de Informática e Admnistração Paulista" border="0" width=30% height=30%>
 
-# AI Project Document - Módulo 1 - FIAP
-
-**_Os trechos em itálico servem apenas como guia para o preenchimento da seção. Por esse motivo, não devem fazer parte da documentação final_**
-
-## Nome do Grupo
+# FARMTECH SOLUTIONS - FASE 4 - FIAP
 
 #### Nomes dos integrantes do grupo
 
-
+- Carlos Daniel Silveira Do Nascimento - RM88439
+- Mauricio Jose Ferlin Tonnera - RM565469
+- Rodrigo Portugal Santos - RM564773
 
 ## Sumário
 
@@ -35,58 +33,88 @@
 
 ### 1.1.1. Contexto da Inteligência Artificial
 
-*Descreva aqui o contexto da indústria de Inteligência Artificial. Explique o segmento de atuação, as atividades executadas e a abrangência das suas aplicações (internacional, nacional ou regional).*
+A Inteligência Artificial tem desempenhado um papel cada vez mais relevante no agronegócio, otimizando a coleta de dados e a tomada de decisões automatizadas. Suas aplicações se estendem a nível nacional e internacional, influenciando diretamente a produtividade, a eficiência no uso de recursos e a sustentabilidade.
 
 ### 1.1.2. Descrição da Solução Desenvolvida
 
-*Descreva brevemente a solução de IA desenvolvida. Inclua aspectos essenciais para a criação de valor do produto com o objetivo de entender melhor a realidade do cliente e entregar uma solução alinhada com suas expectativas.*
+Este projeto propõe um sistema completo de monitoramento agrícola composto por três módulos: um sistema embarcado com ESP32, um modelo de Machine Learning para prever a necessidade de irrigação e um script Python com banco de dados SQLite. Juntos, esses elementos criam uma solução robusta e acessível para pequenas e médias propriedades rurais.
 
 # <a name="c2"></a>2. Visão Geral do Projeto
 
 ## 2.1. Objetivos do Projeto
 
-*Defina claramente os objetivos do projeto de IA. O que o projeto pretende alcançar?*
+- Monitorar as condições do solo (umidade, pH, fósforo e potássio) em tempo real
+- Prever automaticamente a necessidade de irrigação
+- Armazenar histórico de leituras para análise e relatórios
 
 ## 2.2. Público-Alvo
 
-*Identifique o público-alvo do projeto. Quem são os usuários finais da solução desenvolvida?*
+Produtores rurais, estudantes de IoT/IA, pesquisadores e desenvolvedores interessados em soluções agrícolas acessíveis e inteligentes.
 
 ## 2.3. Metodologia
 
-*Descreva a metodologia utilizada para desenvolver o projeto. Quais foram as etapas e processos seguidos?*
+O projeto foi dividido em três módulos principais:
+
+- Desenvolvimento de sistema embarcado com ESP32 no simulador Wokwi
+- Treinamento de modelo preditivo com Scikit-learn e visualização com Streamlit
+- Desenvolvimento de banco de dados com SQLite e operações CRUD
 
 # <a name="c3"></a>3. Desenvolvimento do Projeto
 
 ## 3.1. Tecnologias Utilizadas
 
-*Liste as tecnologias, ferramentas e bibliotecas utilizadas no desenvolvimento do projeto de IA.*
+- C++ (ESP32)
+- Python (Scikit-learn, Streamlit, SQLite)
+- Wokwi (simulador ESP32)
+- Visual Studio Code / Jupyter Notebook
 
 ## 3.2. Modelagem e Algoritmos
 
-*Descreva os modelos e algoritmos de IA utilizados no projeto. Explique por que esses modelos foram escolhidos e como foram implementados.*
+Utilizou-se um classificador binário simples (DecisionTreeClassifier) treinado com dados simulados de umidade. O objetivo é classificar se o solo precisa de irrigação (Sim/Não).
 
 ## 3.3. Treinamento e Teste
 
-*Descreva o processo de treinamento e teste dos modelos de IA. Inclua informações sobre os conjuntos de dados utilizados, métricas de avaliação e resultados obtidos.*
+O modelo foi treinado com 100 amostras artificiais. A divisão treino/teste foi feita com 80/20. A acurácia superou 90% nas previsões. A interface Streamlit permite testar manualmente a previsão com valores inseridos pelo usuário.
 
 # <a name="c4"></a>4. Resultados e Avaliações
 
 ## 4.1. Análise dos Resultados
 
-*Analise os resultados obtidos com os modelos de IA. Compare os resultados esperados com os resultados reais e discuta as possíveis razões para as diferenças.*
+- A previsão de irrigação foi consistente com a lógica do ESP32 (umidade < 40%).
+- O Serial Plotter apresentou corretamente a evolução das leituras.
+- O banco de dados armazenou e permitiu editar registros com sucesso.
 
 ## 4.2. Feedback dos Usuários
 
-*Inclua feedback recebido de usuários finais durante o processo de avaliação do projeto.*
+Como se trata de um projeto acadêmico, o feedback foi interno entre os membros do grupo e tutor. A abordagem modular foi elogiada pela clareza e divisão funcional.
 
 # <a name="c5"></a>5. Conclusões e Trabalhos Futuros
 
-*Descreva de que formas a solução desenvolvida atingiu os objetivos do projeto. Indique pontos fortes e pontos a melhorar. Relacione os pontos de melhorias evidenciados e elabore um plano de ações para serem implementadas no futuro.*
+O projeto FarmTech Solutions - Fase 4 atingiu os objetivos propostos ao integrar sensores simulados, um modelo preditivo funcional e uma estrutura de armazenamento de dados. O uso de tecnologias acessíveis como Streamlit, SQLite e Wokwi permite replicabilidade e expansão futura.
+
+Possíveis trabalhos futuros:
+
+- Utilização de dados reais capturados por sensores físicos
+- Treinamento com dados multivariados (pH, fósforo, potássio)
+- Integração com dashboard online e notificações automatizadas
 
 # <a name="c6"></a>6. Referências
 
-_Incluir as principais referências de seu projeto, para que outros possam consultar caso tenham interesse em aprofundar._
+- Documentação oficial do Streamlit: https://docs.streamlit.io/
+- Scikit-learn Documentation: https://scikit-learn.org/stable/
+- SQLite Python Docs: https://docs.python.org/3/library/sqlite3.html
+- Simulador Wokwi: https://wokwi.com/
 
 # <a name="c7"></a>Anexos
 
-*Inclua aqui quaisquer complementos para seu projeto, como diagramas, imagens, tabelas etc. Organize em sub-tópicos utilizando headings menores (use ## ou ### para isso).*
+## Prints dos sistemas interativos:
+
+### ESP32 com LCD e Serial Plotter (main.ino)
+
+### Interface de previsão (app.py)
+
+### Dataset gerado (dataset_umidade.csv)
+
+### Script Python do banco de dados (script.py)
+
+> Imagens e prints estão organizados na pasta assets/ do repositório.
