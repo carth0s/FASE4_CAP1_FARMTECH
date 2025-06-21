@@ -107,14 +107,17 @@ Possíveis trabalhos futuros:
 
 # <a name="c7"></a>Anexos
 
-## Prints dos sistemas interativos:
+### Prints dos sistemas:
 
-### ESP32 com LCD e Serial Plotter (main.ino)
+### ESP32 com LCD (main.ino)
+<img src="assets/sensor.jpeg" border="0" width=80% height=80%>
+
+### ESP32 Plotter
+<img src="assets/plotter.jpeg" border="0" width=80% height=80%>
 
 ### Interface de previsão (app.py)
+<img src="assets/ml1.jpeg" border="0" width=80% height=80%>
 
-### Dataset gerado (dataset_umidade.csv)
-
-### Script Python do banco de dados (script.py)
+<img src="assets/ml2.jpeg" border="0" width=80% height=80%>
 
 > Imagens e prints estão organizados na pasta assets/ do repositório.
