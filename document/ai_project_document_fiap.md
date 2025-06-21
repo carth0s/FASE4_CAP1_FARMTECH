@@ -113,7 +113,7 @@ Possíveis trabalhos futuros:
 <img src="assets/sensor.jpeg" border="0" width=80% height=80%>
 
 ### ESP32 Plotter
-<img src="main/assets/plotter.jpeg" border="0" width=80% height=80%>
+<img src="/assets/plotter.jpeg" border="0" width=80% height=80%>
 
 ### Interface de previsão (app.py)
 <img src="assets/ml1.jpeg" border="0" width=80% height=80%>
