@@ -26,11 +26,14 @@ Este projeto da Fase 4 da FarmTech Solutions tem como objetivo desenvolver um si
 
 A solução é composta por três pilares principais:
 
-ESP32 (via Wokwi): Simula sensores ambientais como umidade, fósforo, potássio e pH do solo. Os dados são exibidos em tempo real no display LCD (I2C) e também enviados ao Serial Plotter para análise gráfica. A irrigação é acionada automaticamente quando a umidade está abaixo de 40%.
+### ESP32 (via Wokwi): 
+Simula sensores ambientais como umidade, fósforo, potássio e pH do solo. Os dados são exibidos em tempo real no display LCD (I2C) e também enviados ao Serial Plotter para análise gráfica. A irrigação é acionada automaticamente quando a umidade está abaixo de 40%.
 
-Banco de Dados em Python (SQLite): Gerencia sensores e leituras com um modelo relacional robusto. Armazena e organiza as informações coletadas, permitindo operações de cadastro, atualização e histórico dos sensores e suas leituras.
+### Banco de Dados em Python (SQLite): 
+Gerencia sensores e leituras com um modelo relacional robusto. Armazena e organiza as informações coletadas, permitindo operações de cadastro, atualização e histórico dos sensores e suas leituras.
 
-Machine Learning com Scikit-learn + Streamlit: Um modelo preditivo foi treinado com base em um dataset simulado de umidade. Ele prevê se o solo precisa de irrigação e está integrado a um dashboard interativo com Streamlit, permitindo que o usuário informe o valor de umidade e visualize a decisão sugerida pelo modelo.
+### Machine Learning com Scikit-learn + Streamlit: 
+Um modelo preditivo foi treinado com base em um dataset simulado de umidade. Ele prevê se o solo precisa de irrigação e está integrado a um dashboard interativo com Streamlit, permitindo que o usuário informe o valor de umidade e visualize a decisão sugerida pelo modelo.
 
 Essa fase visa demonstrar como a inteligência artificial pode auxiliar na tomada de decisões agrícolas, otimizando o uso da água e promovendo um monitoramento eficiente do solo.
 
