@@ -39,7 +39,7 @@ Um modelo preditivo foi treinado com base em um dataset simulado de umidade. Ele
 
 ## 🎥 Vídeo de Demonstração
 
-Vídeo com o código em funcionamento: https://youtu.be/yiYGIzw4ZB8
+Vídeo com o código em funcionamento: [https://youtu.be/OuwjBovG9uU](https://youtu.be/OuwjBovG9uU)
 
 
 ## 📁 Estrutura de pastas
