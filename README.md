@@ -55,8 +55,23 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
 ## 🔧 Como executar o código
 
-*Acrescentar as informações necessárias sobre pré-requisitos (IDEs, serviços, bibliotecas etc.) e instalação básica do projeto, descrevendo eventuais versões utilizadas. Colocar um passo a passo de como o leitor pode baixar o seu código e executá-lo a partir de sua máquina ou seu repositório. Considere a explicação organizada em fase.*
+### Simulação ESP32 no Wokwi
+✅ Como Acessar:
+Abra o projeto clicando [Aqui](https://wokwi.com/projects/434219114256049153)
 
+✅ Componentes Usados:
+- ESP32
+- Sensor DHT22 (umidade)
+- Fotoresistor (simula pH)
+- Botões (fósforo e potássio)
+- Display LCD I2C
+- Serial Plotter (gráfico de variáveis)
+
+💡 O que faz?
+- Lê sensores e exibe em tempo real no LCD
+- Liga a bomba se a umidade < 40%
+- Mostra dados em gráfico pelo Serial Plotter
+- Código comentado e otimizado para memória
 
 ## 🗃 Histórico de lançamentos
 
