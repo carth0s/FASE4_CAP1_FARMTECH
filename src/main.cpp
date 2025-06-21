@@ -1,68 +1,73 @@
-#include "DHT.h"  // Biblioteca para o sensor DHT
+#include "DHT.h"                // Biblioteca para o sensor DHT22 (umidade e temperatura, usamos só a umidade)
+#include <Wire.h>              // Biblioteca base para comunicação I2C
+#include <LiquidCrystal_I2C.h> // Biblioteca para controlar o display LCD 16x2 via I2C
 
-// Definição dos pinos conectados aos sensores e atuadores
-#define SENSOR_PH 34          // pino analógico para simular sensor de pH (com LDR)
-#define SENSOR_UMIDADE 4      // pino digital ligado ao DHT22 (umidade)
-#define SENSOR_FOSFORO 18     // pino digital ligado a botão/fonte para fósforo
-#define SENSOR_POTASSIO 19    // pino digital ligado a botão/fonte para potássio
-#define LED_BOMBA 5           // pino digital para LED que simula o acionamento da bomba
+// === Definição dos pinos usados no projeto ===
+#define SENSOR_PH 34           // Entrada analógica conectada a um LDR (simulando sensor de pH)
+#define SENSOR_UMIDADE 4       // Pino digital conectado ao DHT22
+#define SENSOR_FOSFORO 18      // Pino com botão simulando presença de fósforo
+#define SENSOR_POTASSIO 19     // Pino com botão simulando presença de potássio
+#define LED_BOMBA 5            // Pino conectado ao LED que simula a bomba d'água
 
-// Inicializa o sensor de umidade do solo (DHT22) no pino definido
-DHT dht(SENSOR_UMIDADE, DHT22);
+// === Instanciação de objetos de sensores ===
+DHT dht(SENSOR_UMIDADE, DHT22);         // Inicializa o objeto DHT, especificando pino e tipo de sensor
+LiquidCrystal_I2C lcd(0x27, 16, 2);     // Inicializa o LCD 16x2 no endereço I2C 0x27
 
 void setup() {
-  Serial.begin(115200);  // Inicializa comunicação serial para exibição de dados
+  Serial.begin(115200); // Inicia a comunicação serial com o baud rate de 115200
 
-  // Configura os sensores de nutrientes como entrada com resistor de pull-up
-  // (espera-se LOW quando o botão estiver pressionado, ou seja, presença do nutriente)
-  pinMode(SENSOR_FOSFORO, INPUT_PULLUP);
-  pinMode(SENSOR_POTASSIO, INPUT_PULLUP);
+  // Envia o cabeçalho das colunas para o Serial Plotter
+  Serial.println("Umidade\tpH\tFosforo\tPotassio\tBomba");
 
-  // Configura o LED que representa a bomba de irrigação como saída
-  pinMode(LED_BOMBA, OUTPUT);
-  
-  // Inicia o sensor DHT
-  dht.begin();
+  // Configura os pinos de entrada/saída
+  pinMode(SENSOR_FOSFORO, INPUT_PULLUP);   // Botão com pull-up interno ativado
+  pinMode(SENSOR_POTASSIO, INPUT_PULLUP);  // Idem
+  pinMode(LED_BOMBA, OUTPUT);              // LED como saída
+
+  // Inicializa os dispositivos
+  dht.begin();       // Inicia o sensor DHT22
+  lcd.init();        // Inicializa o LCD
+  lcd.backlight();   // Liga a luz de fundo do LCD
 }
 
 void loop() {
-  // Leitura do "sensor de pH", simulado com um LDR ligado ao pino analógico
-  int ph = analogRead(SENSOR_PH);
+  // === Leitura dos sensores ===
+  uint16_t phRaw = analogRead(SENSOR_PH);              // Leitura analógica bruta (0 a 4095)
+  float umidade = dht.readHumidity();                  // Lê umidade do ar (0–100%)
+  bool fosforo = digitalRead(SENSOR_FOSFORO) == LOW;   // Botão pressionado = presença de fósforo
+  bool potassio = digitalRead(SENSOR_POTASSIO) == LOW; // Botão pressionado = presença de potássio
 
-  // Leitura da umidade do solo através do DHT22
-  float umidade = dht.readHumidity();
+  // === Conversão do valor analógico em pH real (0.0 a 14.0) ===
+  float phReal = map(phRaw, 0, 4095, 0, 1400) / 100.0; // Equivalência linear simulada
 
-  // Verificação da presença de fósforo e potássio
-  // (LOW = botão pressionado = nutriente presente)
-  bool fosforo = digitalRead(SENSOR_FOSFORO) == LOW;
-  bool potassio = digitalRead(SENSOR_POTASSIO) == LOW;
+  // === Normalização dos dados para exibição equilibrada no Serial Plotter ===
+  float phPlot = (phReal / 14.0) * 100.0;        // pH real convertido para 0–100
+  float umidadePlot = umidade;                   // Umidade já está em 0–100
+  int fosforoPlot = fosforo ? 100 : 0;           // Presença vira 100; ausência, 0
+  int potassioPlot = potassio ? 100 : 0;         // Idem
+  int bombaPlot = (umidade < 40.0 && !isnan(umidade)) ? 100 : 0; // Liga a bomba se a umidade for válida e menor que 40%
 
-  // Lógica de irrigação:
-  // A bomba é acionada apenas se a umidade estiver abaixo de 40%
-  if (umidade < 40.0) {
-    digitalWrite(LED_BOMBA, HIGH);  // Liga a bomba
-  } else {
-    digitalWrite(LED_BOMBA, LOW);   // Desliga a bomba
-  }
+  // === Controle da bomba d'água (LED) ===
+  digitalWrite(LED_BOMBA, bombaPlot > 0 ? HIGH : LOW); // Liga ou desliga o LED com base na condição da bomba
 
-  // Alerta de ausência de nutrientes (não interfere diretamente na irrigação)
-  if (!fosforo) {
-    Serial.println("Alerta: Falta de fósforo no solo.");
-  }
-  if (!potassio) {
-    Serial.println("Alerta: Falta de potássio no solo.");
-  }
+  // === Atualização do display LCD ===
+  lcd.clear();                       // Limpa o display
+  lcd.setCursor(0, 0);              // Linha 1
+  lcd.print("Umi:");
+  lcd.print(umidade, 0);            // Mostra umidade sem casas decimais
+  lcd.print("% ");
+  lcd.print(bombaPlot ? "ON" : "OFF"); // Mostra status da bomba
 
-  // Exibe todas as leituras e estados no monitor serial
-  Serial.println("----- LEITURAS -----");
-  Serial.print("Umidade: ");
-  Serial.println(umidade);
-  Serial.print("pH (simulado com LDR): ");
-  Serial.println(ph);
-  Serial.print("Fósforo (botão): ");
-  Serial.println(fosforo ? "Presente" : "Ausente");
-  Serial.print("Potássio (botão): ");
-  Serial.println(potassio ? "Presente" : "Ausente");
+  lcd.setCursor(0, 1);              // Linha 2
+  lcd.print(fosforo ? "Fos+ " : "Fos- ");   // Presença ou ausência de fósforo
+  lcd.print(potassio ? "Pot+ " : "Pot- "); // Presença ou ausência de potássio
 
-  delay(2000);  // Aguarda 2 segundos antes da próxima leitura
+  // === Envio dos dados para o Serial Plotter ===
+  Serial.print(umidadePlot);   Serial.print("\t");  // Umidade
+  Serial.print(phPlot);        Serial.print("\t");  // pH
+  Serial.print(fosforoPlot);   Serial.print("\t");  // Fósforo
+  Serial.print(potassioPlot);  Serial.print("\t");  // Potássio
+  Serial.println(bombaPlot);                       // Bomba
+
+  delay(2000); // Aguarda 2 segundos para a próxima leitura
 }
