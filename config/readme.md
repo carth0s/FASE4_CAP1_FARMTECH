@@ -1,1 +1,1 @@
-Posicione aqui arquivos de configuração que são usados para definir parâmetros e ajustes do projeto.
+_Esta pasta não foi utilizada no projeto, mas foi mantida para respeitar o template obrigatório_
