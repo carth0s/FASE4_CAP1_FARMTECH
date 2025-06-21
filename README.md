@@ -35,7 +35,7 @@ Gerencia sensores e leituras com um modelo relacional robusto. Armazena e organi
 ### Machine Learning com Scikit-learn + Streamlit: 
 Um modelo preditivo foi treinado com base em um dataset simulado de umidade. Ele prevê se o solo precisa de irrigação e está integrado a um dashboard interativo com Streamlit, permitindo que o usuário informe o valor de umidade e visualize a decisão sugerida pelo modelo.
 
-Essa fase visa demonstrar como a inteligência artificial pode auxiliar na tomada de decisões agrícolas, otimizando o uso da água e promovendo um monitoramento eficiente do solo.
+#### Essa fase visa demonstrar como a inteligência artificial pode auxiliar na tomada de decisões agrícolas, otimizando o uso da água e promovendo um monitoramento eficiente do solo.
 
 ## 🎥 Vídeo de Demonstração
 
