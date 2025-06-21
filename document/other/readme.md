@@ -1,2 +1,1 @@
-Posicione aqui arquivos extras de documentação do game. Apague este arquivo ao final do módulo
-
+_Esta pasta não foi utilizada no projeto, mas foi mantida para respeitar o template obrigatório_
