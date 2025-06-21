@@ -1,1 +1,1 @@
-Posicione aqui scripts auxiliares para tarefas específicas como deploy, migrações de banco de dados e backups.
+_Esta pasta não foi utilizada no projeto, mas foi mantida para respeitar o template obrigatório_
